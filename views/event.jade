@@ -1,0 +1,7 @@
+.event-detail
+    h2.event-name {{ event.name }}
+    p.time
+        span.from {{ event.from | date: 'shortTime'}}
+        |  -
+        span.to {{ event.to | date: 'shortTime'}}
+    p.where {{ event.where }}

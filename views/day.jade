@@ -1,0 +1,11 @@
+// Format a date so it displays in the format "Friday 1/16"
+h2.date {{ day.date | date: 'EEEE M/d'}}
+//  TODO: Loop through events and display each one with this HTML
+.event(ng-repeat='event in day.events')
+  a(href='#/{{$index}}')
+    h3.name {{ event.name }}
+    p
+      span.from {{ event.from | date: 'shortTime' }}
+      |  -
+      span.to {{ event.to| date: 'shortTime' }}
+
